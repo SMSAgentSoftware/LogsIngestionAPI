@@ -34,7 +34,7 @@ Get-AzResourceProvider -ProviderNamespace $ProviderNamespace |
     Select-Object -ExpandProperty ApiVersions
 
 # Using Invoke-AzRestMethod - returns the default API version
-$subscriptionId = "e7b7fedf-8a8f-4b0c-913b-a08ccd060d9a"#"99990ab-ad09-459d-8443-d9b052ab9100"
+$subscriptionId = "99990ab-ad09-459d-8443-d9b052ab9100"
 $resourceID = "/subscriptions/$subscriptionId/providers/$ProviderNamespace/resourceTypes"
 $apiVersion = "2021-04-01"
 $response = Invoke-AzRestMethod -Path "$resourceID`?api-version=$apiVersion" -Method GET
